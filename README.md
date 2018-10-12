@@ -8,7 +8,7 @@ Inspired by docs.unrealengine.com
 PrimaryActorTick.bCanEverTick // set to true in constructor to call Tick() every frame.
 ```
 ### Set Property
-```
+```c++
 UCLASS()
 class AMyActor : public AActor
 {
@@ -23,7 +23,7 @@ public:
 }
 ```
 Setting defaults:
-```
+```c++
 AMyActor::AMyActor() :
     TotalDamage(200),
     DamageTimeInSeconds(1.f)
