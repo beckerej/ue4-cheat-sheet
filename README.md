@@ -30,8 +30,8 @@ AMyActor::AMyActor() {
 
 AMyActor::AMyActor():TotalDamage(200) { }
 ```
-
-Making calculated properties hot reload properly, you must hook into PostEditChangeProperty().
+### Update 'Dynamic' Properties
+Making calculated properties update properly in the menu and not displaying defaults, you must hook into PostEditChangeProperty().
 ```c++
 void AMyActor::PostInitProperties() {
     Super::PostInitProperties();
@@ -49,12 +49,13 @@ void AMyActor::PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEven
 }
 #endif
 ```
+### Set Functions
 Creating functions as `UFUNCTION` macro to expose it to UE4's reflection system. "The `BlueprintCallable` option exposes it to the Blueprints Virtual Machine."
 ```c++
 UFUNCTION(BlueprintCallable, Category="Damage")
 void CalculateValues();
 ```  
-
+#### `Function` Options
 `BlueprintCallable`->regular callable relationship
 
 `BlueprintImplementableEvent`->interface-like inheritence  
