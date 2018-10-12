@@ -21,7 +21,7 @@ public:
     ...
 }
 ```
-Setting defaults: (else set to ```c+++ nullptr ```
+Setting defaults: (else set to ```nullptr``` by default
 ```c++
 AMyActor::AMyActor() {
     TotalDamage = 200;
