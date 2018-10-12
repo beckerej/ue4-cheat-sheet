@@ -54,10 +54,13 @@ Creating functions as `UFUNCTION` macro to expose it to UE4's reflection system.
 UFUNCTION(BlueprintCallable, Category="Damage")
 void CalculateValues();
 ```  
+
 `UFUNCTION` ~ regular public callable relationship
 `BlueprintImplementableEvent` ~ interface-like inheritence  
+
 `BlueprintNativeEvent` ~ virtual-like inheritence where blueprint can override, must implement `<function name>_Implementation()` for default.
-   
+
+
 ```c++
 void AMyActor::CalledFromCpp_Implementation() { /* DEFAULT */ }
 ```
