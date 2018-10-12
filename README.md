@@ -10,8 +10,7 @@ PrimaryActorTick.bCanEverTick // set to true in constructor to call Tick() every
 ### Set Property
 ```c++
 UCLASS()
-class AMyActor : public AActor
-{
+class AMyActor : public AActor {
     GENERATED_BODY()
 public:
   UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Damage")
@@ -22,11 +21,10 @@ public:
     ...
 }
 ```
-Setting defaults:
+Setting defaults: (else set to ```c+++ nullptr ```
 ```c++
-AMyActor::AMyActor() :
-    TotalDamage(200),
-    DamageTimeInSeconds(1.f)
-{
+AMyActor::AMyActor() {
+    TotalDamage = 200;
 }
+AMyActor::AMyActor():TotalDamage(200) { }
 ```
