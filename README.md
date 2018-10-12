@@ -56,11 +56,11 @@ UFUNCTION(BlueprintCallable, Category="Damage")
 void CalculateValues();
 ```  
 #### `Function` Options
-`BlueprintCallable`->regular callable relationship
+*`BlueprintCallable`*->regular callable relationship
 
-`BlueprintImplementableEvent`->interface-like inheritence  
+*`BlueprintImplementableEvent`*->interface-like inheritence  
 
-`BlueprintNativeEvent`->virtual-like inheritence where blueprint can override, must implement `<function name>_Implementation()` for default like so:
+*`BlueprintNativeEvent`*->virtual-like inheritence where blueprint can override, must implement `<function name>_Implementation()` for default like so:
 ```c++
 void AMyActor::CalledFromCpp_Implementation() { /* DEFAULT */ }
 ```
